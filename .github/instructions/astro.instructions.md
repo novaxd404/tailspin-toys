@@ -38,6 +38,21 @@ const games = await getAllGames(getDatabase());
 - Use `<slot />` for content injection
 - Include common elements: `<head>`, navigation, footer
 - Import global styles in layouts
+- Document the `Props` interface for each reusable component, including the purpose of every prop and any default or required behavior.
+
+Component props example:
+
+```astro
+---
+/** Props define the public contract for this reusable card component. */
+interface Props {
+  /** Game title shown as the card heading. */
+  title: string;
+  /** Optional destination; when omitted, the card is not a link. */
+  href?: string;
+}
+---
+```
 
 ### Layout Example
 
