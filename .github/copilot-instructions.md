@@ -14,6 +14,20 @@ This is a crowdfunding platform for games with a developer theme. The applicatio
 
 ## Code standards
 
+### Comments and Documentation
+
+- Comment intent, constraints, and non-obvious decisions — not mechanics that are already clear from the code.
+- Treat comments and documentation as part of the implementation. Update or remove stale guidance in the same change as the related code.
+- Use TSDoc/JSDoc for every exported function in `db/` and `src/lib/`. Describe the function's purpose, each parameter (including injectable `db` parameters), and the return value.
+- Document the `Props` interface for every reusable `.astro` component so its public contract is clear to callers.
+- Prefer short comments near the decision they explain. Do not add comments solely to increase coverage or narrate straightforward control flow.
+
+### TypeScript Formatting
+
+- Use single quotes for strings, semicolons, four-space indentation, and trailing commas in multiline lists and objects.
+- Keep imports and object destructuring spaced consistently (`{ value }`), and use explicit parameter and return types in the data layer.
+- ESLint enforces the baseline formatting rules (`semi`, `quotes`, `comma-dangle`, and `object-curly-spacing`). Run the lint command instead of relying on editor-specific formatting.
+
 ### Required Before Each Commit
 
 #### Testing guidelines
